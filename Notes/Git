@@ -1,4 +1,42 @@
- git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]
+create a new repository on the command line
+echo "# Angular-Learn" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/ysharsha99/Angular-Learn.git
+git push -u origin main
+…or push an existing repository from the command line
+git remote add origin https://github.com/ysharsha99/Angular-Learn.git
+git branch -M main
+git push -u origin main
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]
            [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
            [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
            [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
