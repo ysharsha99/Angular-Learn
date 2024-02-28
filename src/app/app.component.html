@@ -1,0 +1,37 @@
+<h1 align="center">Template Driven Forms Demo</h1>
+
+<form #fm="ngForm" (ngSubmit)="submit(fm)">
+
+  <input type="text" name="username" placeholder="Enter the name" ngModel #un="ngModel" required><br>
+
+  <div class="error" *ngIf="(fm.submitted||un.touched) && un.errors?.['required']">Username is Need .please Enter</div>
+  <br>
+
+  <input type="email" name="email" placeholder="Enter the email" ngModel #em="ngModel" pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$" required><br>
+
+    <div class="error" *ngIf="(fm.submitted||em.touched) && em.errors?.['required']">Email required</div>
+
+  <div class="error" *ngIf="(fm.submitted||em.touched) && em.errors?.['pattern']">Please enter proper email</div><br>
+
+  <input type="password" name="password" placeholder="Enter the password" ngModel #pwd="ngModel" minlength="8" required><br>
+
+    <div class="error" *ngIf="(fm.submitted||pwd.touched) && pwd.errors?.['required']">PassWord required</div>
+
+  <div class="error" *ngIf="(fm.submitted||pwd.touched) && pwd.errors?.['minlength']">Enter minimum 8 characters</div>
+  <br>
+  <button type="submit">click me</button>
+</form>
+
+
+<!--  
+<form action="/action_page.php">
+  <label for="name">Enter your name:</label>
+  <input type="text" id="name" name="name" placeholder="e.g. John Smith">
+  <label for="email">Enter your email:</label>
+  <input type="email" id="email" name="email" placeholder="e.g. john@example.com">
+  <label for="message">Enter your message:</label>
+  <textarea id="message" name="message" placeholder="Write something..."></textarea>
+  <input type="submit" value="Submit">
+</form>
+
+ -->
